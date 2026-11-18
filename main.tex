@@ -1,0 +1,247 @@
+%-------------------------
+% Resume in Latex
+% Author : Violet Budiansky
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[letterpaper, hmargin=0.5in, vmargin=0.4in]{geometry}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+\usepackage{fontspec}
+\setmainfont{Lexend}[
+  Path = ./fonts/,
+  Extension = .ttf,
+  Scale = 0.92,
+  UprightFont = *-Regular,
+  BoldFont = *-SemiBold,
+  ItalicFont = *-Regular,
+  ItalicFeatures = {FakeSlant=0.15},
+  BoldItalicFont = *-SemiBold,
+  BoldItalicFeatures = {FakeSlant=0.15}
+]
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \raggedright\large\bfseries
+}{}{0em}{\MakeUppercase}[\color{black}\titlerule]
+\titlespacing*{\section}{0pt}{6pt}{3pt}
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2}
+  }
+}
+
+% Plain bullet with no bold label
+\newcommand{\resumeBullet}[1]{
+  \item\small{#1}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+% Same as \resumeSubheading, with an event banner on the right: {image}{1}{2}{3}{4}
+\newlength{\bannerwidth}
+\setlength{\bannerwidth}{0.95in}
+\newcommand{\resumeSubheadingImg}[5]{
+  \item
+    \begin{minipage}[c]{\dimexpr0.97\textwidth-\bannerwidth-6pt\relax}
+      \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+        \textbf{#2} & #3 \\
+        \textit{\small#4} & \textit{\small #5} \\
+      \end{tabular*}
+    \end{minipage}\hspace{6pt}%
+    \begin{minipage}[c]{\bannerwidth}
+      \includegraphics[width=\bannerwidth]{#1}
+    \end{minipage}\vspace{1pt}
+}
+
+% Single-line heading: name | detail ... link or date
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \small#2 \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*, itemsep=3pt, topsep=0pt, parsep=0pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=1pt, topsep=2pt, parsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\LARGE Violet Budiansky}} & Email: \href{mailto:violetbudiansky@gmail.com}{violetbudiansky@gmail.com} \\
+  \href{https://github.com/vivithequeen}{github.com/vivithequeen} $|$ \href{https://violetquinn.dev}{violetquinn.dev} & Mobile: +1 (978) 333-2641 \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Advanced Math and Science Academy}{Marlborough, MA}
+      {Grade 12 -- Computer Science Coursework}{Sept. 2020 -- June 2027 (Expected)}
+    \resumeSubheading
+      {Worcester Polytechnic Institute}{Worcester, MA}
+      {Launch: Interactive Media \& Game Development (IMGD) Program}{Summer 2025}
+  \resumeSubHeadingListEnd
+
+%-----------AWARDS-----------------
+\section{Awards}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{\href{https://athena.hackclub.com/award?id=3SqZDQeR}{The Athena Award}} $|$ \emph{Shipped 11 independent projects across 261 hours of work}}
+      {Novemeber 2025}
+    \resumeProjectHeading
+      {\textbf{Society of Women Engineers Certificate of Merit, Highest Honors} $|$ \emph{Excellence in Science and Mathematics}}
+      {June 2026}
+    \resumeProjectHeading
+      {\textbf{Love Your Labels} $|$ \emph{Threads Youth Fashion Program -- Certificate of Achievement}}
+      {October 2023 -- March 2025}
+
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheadingImg{horizons}
+      {Hack Club Horizons}{\href{https://horizons.hackclub.com}{horizons.hackclub.com}}
+      {Senior Events Engineer}{March 2026 -- Present}
+      \resumeItemListStart
+        \resumeItem{Events}
+          {Organized and ran 6 international hackathons in San Francisco, Sydney, Berlin, Singapore, Toronto, and Cairo with a combined budget of \$250K. Additionally spent a week in person at Hack Club HQ in Burlington, Vermont working on event operations.}
+        \resumeItem{Impact}
+            {Hosted 367 attendees from 42 countries. Participants earned their spots by completing 12,490 combined hours of coding projects. Traveled to and staffed the San Francisco, Berlin, and Toronto events in person.}
+        \resumeItem{Engineering}
+            {Helped develop and maintain the platform where teenagers logged over 23,000 hours of project work to qualify for in-person hackathons or earn prizes.}
+
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------VOLUNTEER-----------------
+\section{Volunteer Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheadingImg{campfire-flagship}
+      {Hack Club Campfire Flagship}{\href{https://flagship.hackclub.com}{flagship.hackclub.com}}
+      {Community Events Lead \& Organizer}{December 2025 -- February 2026}
+      \resumeItemListStart
+        \resumeItem{Event}
+          {Ran Campfire Flagship, a game jam with 75 attendees and a budget of \$80K in Los Angeles held in partnership with Open Sauce and YouTubers including William Osman, Michael Reeves, and The Backyard Scientist.}
+        \resumeItem{Community Events}
+          {Ran community events where over 60 people joined online calls to code and qualify for the event.}
+      \resumeItemListEnd
+    \resumeSubheadingImg{sunbeam-boston}
+      {Hack Club Sunbeam Boston}{\href{https://sunbeam.hackclub.com/boston}{sunbeam.hackclub.com/boston}}
+      {Event Point of Contact \& Lead Organizer}{August 2026}
+      \resumeItemListStart
+        \resumeItem{Event}
+          {Ran Boston's Sunbeam, a one-day social coding event for girls ages 13--18, held alongside 20+ cities worldwide.}
+      \resumeItemListEnd
+    \resumeSubheadingImg{haven-boston}
+      {Hack Club Haven Boston}{\href{https://haven.hackclub.com/boston}{haven.hackclub.com/boston}}
+      {Safeguarding Lead \& Event Organizer}{November 2026}
+      \resumeItemListStart
+        \resumeItem{Event}
+          {Organized and led safeguarding for Boston's Haven, a one-day game jam for teens ages 13--18 at Microsoft NERD, held alongside 200+ cities worldwide.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Sarkeon} $|$ \emph{C\#, Godot}}
+      {\href{https://github.com/vivithequeen/sarkeon-godot}{github.com/vivithequeen/sarkeon-godot}}
+      \resumeItemListStart
+        \resumeBullet{Co-developed a pixel sandbox game with a procedural creature system using per-pixel pathfinding.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Infinity Lost} $|$ \emph{Godot, GMTK Game Jam 2025}}
+      {\href{https://vivithequeen.itch.io/infinity-lost}{vivithequeen.itch.io/infinity-lost}}
+      \resumeItemListStart
+        \resumeBullet{Created a 3D FPS game for the GMTK Game Jam in 4 days.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{3D Software Renderers} $|$ \emph{C++, C, SDL3, SFML, ImGui}}
+      {\href{https://github.com/vivithequeen/v3DRenderer}{github.com/vivithequeen/v3DRenderer}}
+      \resumeItemListStart
+        \resumeBullet{Built 3D renderers from scratch, including an OBJ model renderer in C++, a Doom-style renderer in C, and a raycaster.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{RFID Attendance Scanner} $|$ \emph{ESP32-C3, KiCad, SPI}}
+      {\href{https://github.com/vivithequeen/Esp32-Devboard-Scanner-PCB}{github.com/vivithequeen/Esp32-Devboard-Scanner-PCB}}
+      \resumeItemListStart
+        \resumeBullet{Designed a \$23.47/unit ESP32-C3 carrier PCB with an SPI RFID reader, status LEDs, and a transistor-driven buzzer.}
+        \resumeBullet{Built with a 12-student Full Stack Development class as the attendance system for my school (2025--2026).}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{game engine} $|$ \emph{C++, raylib, ImGui}}
+      {\href{https://github.com/vivithequeen/game-engine}{github.com/vivithequeen/game-engine}}
+      \resumeItemListStart
+        \resumeBullet{Developed a 3D game engine with a built-in editor, textured model loading, and world saving and loading.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Personal Website} $|$ \emph{Astro, CSS, HTML}}
+      {\href{https://violetquinn.dev}{violetquinn.dev} | \href{https://github.com/vivithequeen/site}{github.com/vivithequeen/site}}
+      \resumeItemListStart
+        \resumeBullet{Designed a implemented a personal website using astro to show photos }
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{TUI Music Player} $|$ \emph{Go, Bubble Tea}}
+      {\href{https://github.com/vivithequeen/tui-music-player}{github.com/vivithequeen/tui-music-player}}
+      \resumeItemListStart
+        \resumeBullet{Built a terminal-based music player for playing local music libraries.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%--------SKILLS & HACKATHONS------------
+\section{Skills \& Hackathons}
+  \begin{itemize}[leftmargin=*, itemsep=1pt, topsep=0pt, parsep=0pt]
+    \item\small{\textbf{Languages}: C\#, C++, C, Python, Go, GDScript, JavaScript, HTML/CSS, GameMaker Language}
+    \item\small{\textbf{Frameworks \& Libraries}: SDL3, SFML, raylib, ImGui, three.js, Astro, Bubble Tea}
+    \item\small{\textbf{Tools}: Git, Godot, GameMaker, Ren'Py, Blender, TrenchBroom, KiCad, Photoshop, Krita, Aseprite, Arduino}
+    \item\small{\textbf{Hackathons Attended}: Sleepover (Chicago, 2026), MIT Blueprint (Campbridge, 2026), Parthenon (NYC, 2025), Daydream Boston (2025), Scrapyard Boston (2025), Counterspell Boston (2024), AMSA Code Bash (2024)}
+  \end{itemize}
+
+\end{document}
